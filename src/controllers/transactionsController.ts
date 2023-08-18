@@ -9,9 +9,7 @@ router.get("/:address", async (req, res) => {
     const address = req.params.address;
     const transactions = await getUSDCTransactions(address, res);
     res.json({ transactions });
-  } catch (error) {
-    handleError(res, error);
-  }
+  } catch (error) {}
 });
 
 export default router;

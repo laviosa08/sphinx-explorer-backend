@@ -9,9 +9,7 @@ router.get("/:address", async (req, res) => {
     const address = req.params.address;
     const balance = await getUSDCBalance(address, res);
     res.json({ balance });
-  } catch (error) {
-    handleError(res, error);
-  }
+  } catch (error)  {}
 });
 
 export default router;
